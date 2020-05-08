@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/person_item_id_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Id : "
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/person_item_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name : "
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/person_item_spec_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Specialization : "
+        android:textSize="18sp" />
+
+</LinearLayout>
