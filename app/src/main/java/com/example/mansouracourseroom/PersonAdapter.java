@@ -11,13 +11,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.PersonHolder> {
+    List<Person>  personList;
 
-    List<Person> personList;
-    PersonAdapterClick adapterClick;
-
-    public PersonAdapter(List<Person> personList, PersonAdapterClick adapterClick) {
+    public PersonAdapter(List<Person> personList) {
         this.personList = personList;
-        this.adapterClick = adapterClick;
     }
 
     @NonNull
@@ -32,14 +29,8 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.PersonHold
 
         holder.textViewId.setText(String.valueOf(person.getId()));
         holder.textViewName.setText(person.getName());
-        holder.textViewSpec.setText(person.getSpecialization());
+        holder.textViewSpeciliazation.setText(person.getSpecialization());
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                adapterClick.onItemClick(person);
-            }
-        });
     }
 
     @Override
@@ -47,14 +38,15 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.PersonHold
         return personList.size();
     }
 
+
     class PersonHolder extends RecyclerView.ViewHolder {
-        TextView textViewId, textViewName, textViewSpec;
+        TextView textViewId, textViewName, textViewSpeciliazation;
         public PersonHolder(@NonNull View itemView) {
             super(itemView);
             textViewId = itemView.findViewById(R.id.person_item_id_tv);
             textViewName = itemView.findViewById(R.id.person_item_name_tv);
-            textViewSpec = itemView.findViewById(R.id.person_item_spec_tv);
+            textViewSpeciliazation = itemView.findViewById(R.id.person_item_spec_tv);
         }
-    }
 
+    }
 }

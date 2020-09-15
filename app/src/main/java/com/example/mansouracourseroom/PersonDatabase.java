@@ -16,7 +16,9 @@ public abstract class PersonDatabase extends RoomDatabase {
 
     public static synchronized PersonDatabase getInstance(Context context) {
         if (instance == null) {
-            instance = Room.databaseBuilder(context, PersonDatabase.class, DB_NAME).build();
+            instance = Room.databaseBuilder(context, PersonDatabase.class, DB_NAME)
+                    .allowMainThreadQueries()
+                    .build();
         }
         return instance;
     }

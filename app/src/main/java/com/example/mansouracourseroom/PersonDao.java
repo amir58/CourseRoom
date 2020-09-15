@@ -8,7 +8,7 @@ import androidx.room.Update;
 
 import java.util.List;
 
-@Dao
+@Dao // Data Access Object
 public interface PersonDao {
 
     @Insert
